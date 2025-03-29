@@ -7,6 +7,7 @@ public class Lab1 {
      * It uses an iterative approach to check each element in the array.
      * Time complexity: O(n), where n is the number of elements in the array.
      * The algorithm iterates through the array once to find the minimum.
+     *
      * @param arr The array of integers to search through.
      * @return The smallest integer found in the array.
      */
@@ -22,6 +23,7 @@ public class Lab1 {
      * This method returns the average value of elements in a given array.
      * It performs a single pass through the array to compute the total sum.
      * Time complexity: O(n), where n is the number of elements in the array.
+     *
      * @param arr The array of integers.
      * @return The average value of the elements as a double.
      */
@@ -35,10 +37,10 @@ public class Lab1 {
 
     /**
      * This method checks if a number is prime.
-     *
+     * <p>
      * A prime number is only divisible by 1 and itself.
      * We check if any number from 2 to n-1 divides n.
-     *
+     * <p>
      * Time complexity: O(n), where n is the input number.
      *
      * @param n The number to check.
@@ -60,9 +62,9 @@ public class Lab1 {
 
     /**
      * This method calculates the factorial of a number using recursion.
-     *
+     * <p>
      * The factorial of a number n is the product of all positive integers less than or equal to n.
-     *
+     * <p>
      * Time complexity: O(n), where n is the input number.
      *
      * @param n The number to find the factorial of.
@@ -74,9 +76,10 @@ public class Lab1 {
         }
         return n * factorial(n - 1);
     }
+
     /**
      * This method finds the nth Fibonacci number using recursion.
-     *
+     * <p>
      * Time complexity: O(2^n), where n is the input number.
      *
      * @param n The index in the Fibonacci sequence.
@@ -90,11 +93,12 @@ public class Lab1 {
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
+
     /**
      * This method calculates the value of a raised to the power n using recursion.
-     *
+     * <p>
      * It multiplies a by itself n times recursively.
-     *
+     * <p>
      * Time complexity: O(n), where n is the exponent.
      *
      * @param a The base number.
@@ -107,6 +111,7 @@ public class Lab1 {
         }
         return a * power(a, n - 1); // Recursive step: aⁿ = a × aⁿ⁻¹
     }
+
     public static void reversePrint(int[] arr, int index) {
         // Базовый случай: если индекс стал меньше 0 — выходим из метода
         if (index < 0) {
@@ -118,6 +123,30 @@ public class Lab1 {
 
         // Затем вызываем метод снова, уменьшая индекс
         reversePrint(arr, index - 1);
+    }
+
+    /**
+     * This method checks if a string contains only digits using recursion.
+     * <p>
+     * It checks one character at a time, starting from index 0.
+     * <p>
+     * Time complexity: O(n), where n is the length of the string.
+     *
+     * @param s     The input string.
+     * @param index The current character index being checked.
+     * @return true if all characters are digits, false otherwise.
+     */
+    public static boolean isOnlyDigits(String s, int index) {
+        if (index == s.length()) {
+            return true; // Базовый случай: дошли до конца строки
+        }
+
+        if (!Character.isDigit(s.charAt(index))) {
+            return false; // Если текущий символ — не цифра
+        }
+
+        // Переходим к следующему символу
+        return isOnlyDigits(s, index + 1);
     }
 
 }

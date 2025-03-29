@@ -3,6 +3,14 @@ package org.lab1.Main;
 public class Main {
 
     public static void main(String[] args) {
+
+        //min
+        int[] numbers = {10, 1, 32, 3, 45};
+
+        int min = Lab1.findMinimum(numbers);
+
+        System.out.println("Minimum number in array is: " + min); // Ожидаем: 1
+
         // Test for average calculation
         int[] arr2 = {3, 5, 2, 6, 4, 1};
         System.out.println("Average: " + Lab1.average(arr2)); // Output: 2.5
@@ -27,18 +35,21 @@ public class Main {
         int exponent = 10;
         System.out.println(base + " raised to the power " + exponent + " is: " + Lab1.power(base, exponent)); // Output: 1024
 
-        int[] numbers = {1, 4, 6, 2};
+        // Test for reverse print using recursion
+        int[] numbers7 = {1, 4, 6, 2};
 
-        // Печатаем сообщение
         System.out.print("Reversed array: ");
 
-        // Вызываем метод, начиная с последнего элемента
-        Lab1.reversePrint(numbers, numbers.length - 1);
+        Lab1.reversePrint(numbers7, numbers7.length - 1);
 
-        // Переход на новую строку
         System.out.println();
 
+        // Test for digit-only string check
+        String str1 = "123456";
+        String str2 = "123a12";
 
+        System.out.println("Is \"" + str1 + "\" all digits? " + Lab1.isOnlyDigits(str1, 0)); // true
+        System.out.println("Is \"" + str2 + "\" all digits? " + Lab1.isOnlyDigits(str2, 0)); // false
 
     }
 }
