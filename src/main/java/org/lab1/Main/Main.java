@@ -22,9 +22,21 @@ public class Main {
         int number4 = 5;  // Renamed to avoid conflict
         System.out.println("Fibonacci of " + number4 + " is: " + Lab1.fibonacci(number4)); // Output: 5
 
+        // Test for power calculation
         int base = 2;
         int exponent = 10;
         System.out.println(base + " raised to the power " + exponent + " is: " + Lab1.power(base, exponent)); // Output: 1024
+
+        int[] numbers = {1, 4, 6, 2};
+
+        // Печатаем сообщение
+        System.out.print("Reversed array: ");
+
+        // Вызываем метод, начиная с последнего элемента
+        Lab1.reversePrint(numbers, numbers.length - 1);
+
+        // Переход на новую строку
+        System.out.println();
 
 
 

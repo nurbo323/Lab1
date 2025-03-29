@@ -107,6 +107,18 @@ public class Lab1 {
         }
         return a * power(a, n - 1); // Recursive step: aⁿ = a × aⁿ⁻¹
     }
+    public static void reversePrint(int[] arr, int index) {
+        // Базовый случай: если индекс стал меньше 0 — выходим из метода
+        if (index < 0) {
+            return;
+        }
+
+        // Сначала печатаем текущий элемент
+        System.out.print(arr[index] + " ");
+
+        // Затем вызываем метод снова, уменьшая индекс
+        reversePrint(arr, index - 1);
+    }
 
 }
 
