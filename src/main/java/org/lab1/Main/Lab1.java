@@ -60,9 +60,9 @@ public class Lab1 {
 
     /**
      * This method calculates the factorial of a number using recursion.
-
+     *
      * The factorial of a number n is the product of all positive integers less than or equal to n.
-
+     *
      * Time complexity: O(n), where n is the input number.
      *
      * @param n The number to find the factorial of.
@@ -74,9 +74,27 @@ public class Lab1 {
         }
         return n * factorial(n - 1);
     }
+    /**
+     * This method finds the nth Fibonacci number using recursion.
+     *
+     * Time complexity: O(2^n), where n is the input number.
+     *
+     * @param n The index in the Fibonacci sequence.
+     * @return The nth Fibonacci number.
+     */
+    public static int fibonacci(int n) {
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
 
 
 }
+
+
 
 
 
