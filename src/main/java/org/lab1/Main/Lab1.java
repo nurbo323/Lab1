@@ -107,10 +107,21 @@ public class Lab1 {
      */
     public static int power(int a, int n) {
         if (n == 0) {
-            return 1; // Base case: any number to the power of 0 is 1
+            return 1;
         }
-        return a * power(a, n - 1); // Recursive step: aⁿ = a × aⁿ⁻¹
+        return a * power(a, n - 1);
     }
+
+    /**
+     * This method prints the elements of an array in reverse order using recursion.
+
+     * It does not use any additional data structures.
+
+     * Time complexity: O(n), where n is the length of the array.
+     *
+     * @param arr The array to reverse-print.
+     * @param index The current index, usually starting from arr.length - 1.
+     */
 
     public static void reversePrint(int[] arr, int index) {
         if (index < 0) {
@@ -118,20 +129,23 @@ public class Lab1 {
         }
 
         System.out.print(arr[index] + " ");
-
         reversePrint(arr, index - 1);
     }
 
+
     /**
-     * This method checks if a string contains only digits using recursion.
-     * <p>
-     * It checks one character at a time, starting from index 0.
-     * <p>
+     * This method checks if a given string contains only digit characters using recursion.
+
+     * It goes through the string one character at a time,
+     * and checks whether each character is a digit.
+
+     * If it finds a non-digit character, it returns false.
+     * If it reaches the end of the string without finding any non-digit characters, it returns true.*
      * Time complexity: O(n), where n is the length of the string.
      *
-     * @param s     The input string.
-     * @param index The current character index being checked.
-     * @return true if all characters are digits, false otherwise.
+     * @param s     The string to check.
+     * @param index The current character index (start with 0).
+     * @return true if the string contains only digits, false otherwise.
      */
     public static boolean isOnlyDigits(String s, int index) {
         if (index == s.length()) {
@@ -144,12 +158,13 @@ public class Lab1 {
 
         return isOnlyDigits(s, index + 1);
     }
+
     /**
      * This method calculates the binomial coefficient C(n, k) using recursion.
-     *
+
      * C(n, k) = C(n-1, k-1) + C(n-1, k)
      * with base cases: C(n, 0) = C(n, n) = 1
-     *
+
      * Time complexity: O(2^n), due to overlapping subproblems.
      *
      * @param n Total number of elements.
@@ -164,9 +179,9 @@ public class Lab1 {
     }
     /**
      * This method finds the greatest common divisor (GCD) of two numbers using recursion.
-     *
+
      * It uses the Euclidean algorithm: GCD(a, b) = GCD(b, a % b)
-     *
+
      * Time complexity: O(log(min(a, b)))
      *
      * @param a First number.
