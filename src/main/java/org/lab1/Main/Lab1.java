@@ -113,15 +113,12 @@ public class Lab1 {
     }
 
     public static void reversePrint(int[] arr, int index) {
-        // Базовый случай: если индекс стал меньше 0 — выходим из метода
         if (index < 0) {
             return;
         }
 
-        // Сначала печатаем текущий элемент
         System.out.print(arr[index] + " ");
 
-        // Затем вызываем метод снова, уменьшая индекс
         reversePrint(arr, index - 1);
     }
 
@@ -138,16 +135,34 @@ public class Lab1 {
      */
     public static boolean isOnlyDigits(String s, int index) {
         if (index == s.length()) {
-            return true; // Базовый случай: дошли до конца строки
+            return true;
         }
 
         if (!Character.isDigit(s.charAt(index))) {
-            return false; // Если текущий символ — не цифра
+            return false;
         }
 
-        // Переходим к следующему символу
         return isOnlyDigits(s, index + 1);
     }
+    /**
+     * This method calculates the binomial coefficient C(n, k) using recursion.
+     *
+     * C(n, k) = C(n-1, k-1) + C(n-1, k)
+     * with base cases: C(n, 0) = C(n, n) = 1
+     *
+     * Time complexity: O(2^n), due to overlapping subproblems.
+     *
+     * @param n Total number of elements.
+     * @param k Number of selected elements.
+     * @return The binomial coefficient.
+     */
+    public static int binomial(int n, int k) {
+        if (k == 0 || k == n) {
+            return 1;
+        }
+        return binomial(n - 1, k - 1) + binomial(n - 1, k);
+    }
+
 
 }
 

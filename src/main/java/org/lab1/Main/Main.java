@@ -51,5 +51,13 @@ public class Main {
         System.out.println("Is \"" + str1 + "\" all digits? " + Lab1.isOnlyDigits(str1, 0)); // true
         System.out.println("Is \"" + str2 + "\" all digits? " + Lab1.isOnlyDigits(str2, 0)); // false
 
+        // Test for binomial coefficient
+        int n1 = 2, k1 = 1;
+        int n2 = 7, k2 = 3;
+
+        System.out.println("C(" + n1 + ", " + k1 + ") = " + Lab1.binomial(n1, k1)); // 2
+        System.out.println("C(" + n2 + ", " + k2 + ") = " + Lab1.binomial(n2, k2)); // 35
+
+
     }
 }
