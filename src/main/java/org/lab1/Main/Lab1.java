@@ -162,7 +162,24 @@ public class Lab1 {
         }
         return binomial(n - 1, k - 1) + binomial(n - 1, k);
     }
+    /**
+     * This method finds the greatest common divisor (GCD) of two numbers using recursion.
+     *
+     * It uses the Euclidean algorithm: GCD(a, b) = GCD(b, a % b)
+     *
+     * Time complexity: O(log(min(a, b)))
+     *
+     * @param a First number.
+     * @param b Second number.
+     * @return The GCD of a and b.
+     */
+    public static int gcd(int a, int b) {
+        if (b == 0) {
+            return a;
+        }
 
+        return gcd(b, a % b);
+    }
 
 }
 

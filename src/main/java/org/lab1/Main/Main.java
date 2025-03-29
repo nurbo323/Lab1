@@ -58,6 +58,12 @@ public class Main {
         System.out.println("C(" + n1 + ", " + k1 + ") = " + Lab1.binomial(n1, k1)); // 2
         System.out.println("C(" + n2 + ", " + k2 + ") = " + Lab1.binomial(n2, k2)); // 35
 
+        // Test for GCD using Euclidean algorithm
+        int a1 = 32, b1 = 48;
+        int a2 = 10, b2 = 7;
+
+        System.out.println("GCD of " + a1 + " and " + b1 + " is: " + Lab1.gcd(a1, b1)); // 16
+        System.out.println("GCD of " + a2 + " and " + b2 + " is: " + Lab1.gcd(a2, b2)); // 1
 
     }
 }
