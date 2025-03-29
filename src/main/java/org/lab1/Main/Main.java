@@ -22,6 +22,11 @@ public class Main {
         int number4 = 5;  // Renamed to avoid conflict
         System.out.println("Fibonacci of " + number4 + " is: " + Lab1.fibonacci(number4)); // Output: 5
 
+        int base = 2;
+        int exponent = 10;
+        System.out.println(base + " raised to the power " + exponent + " is: " + Lab1.power(base, exponent)); // Output: 1024
+
+
 
     }
 }

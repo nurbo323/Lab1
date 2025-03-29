@@ -90,7 +90,23 @@ public class Lab1 {
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
-
+    /**
+     * This method calculates the value of a raised to the power n using recursion.
+     *
+     * It multiplies a by itself n times recursively.
+     *
+     * Time complexity: O(n), where n is the exponent.
+     *
+     * @param a The base number.
+     * @param n The exponent.
+     * @return The result of a raised to the power n.
+     */
+    public static int power(int a, int n) {
+        if (n == 0) {
+            return 1; // Base case: any number to the power of 0 is 1
+        }
+        return a * power(a, n - 1); // Recursive step: aⁿ = a × aⁿ⁻¹
+    }
 
 }
 
