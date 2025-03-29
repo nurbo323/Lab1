@@ -9,6 +9,13 @@ public class Main {
         System.out.println("Average: " + Lab1.average(arr2)); // 2.5
 
 
+        int number1 = 7;
+        System.out.println("Is " + number1 + " Prime? " + Lab1.isPrime(number1)); // true
+
+
+        int number2 = 10;
+        System.out.println("Is " + number2 + " Prime? " + Lab1.isPrime(number2)); // false
+
 
     }
 }
