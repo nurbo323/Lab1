@@ -17,6 +17,10 @@ public class Main {
         System.out.println("Is " + number2 + " Prime? " + Lab1.isPrime(number2)); // false
 
 
+        int number = 5;
+        System.out.println("Factorial of " + number + " is: " + Lab1.factorial(number)); // Output: 120
+
+
     }
 }
 

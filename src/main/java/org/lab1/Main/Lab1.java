@@ -58,6 +58,24 @@ public class Lab1 {
         return true; // prime if no divisors found
     }
 
+    /**
+     * This method calculates the factorial of a number using recursion.
+
+     * The factorial of a number n is the product of all positive integers less than or equal to n.
+
+     * Time complexity: O(n), where n is the input number.
+     *
+     * @param n The number to find the factorial of.
+     * @return The factorial of n.
+     */
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
+
 }
 
 
